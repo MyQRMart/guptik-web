@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install GupTik</title>
+  <link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="/">GUPTIK</a>
+  <nav>
+    <a href="/install">Install</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+  </nav>
+</header>
+<main>
+  <h1>Install</h1>
+  <p>One node per house. The desktop app is the node. The phone is the remote. Same email on both is the pair — no QR required.</p>
+
+  <h2>1. Desktop (the node)</h2>
+  <ol>
+    <li>Install GupTik Desktop on Linux (or Windows when that build is published).</li>
+    <li>Sign in with your MyQRMart / GupTik account.</li>
+    <li>If this PC already has a GupTik Docker stack, the app <strong>reuses it</strong>. It will not create a second one.</li>
+    <li>First time only: pick a parent folder. GupTik creates a <code>GupTik/</code> folder inside it.</li>
+    <li>Leave the app running. Gateway is <code>:55000</code>, database <code>:55432</code>.</li>
+  </ol>
+  <p class="muted">Linux install path used here: <code>~/.local/opt/guptik-desktop</code>. Menu name: GupTik.</p>
+  <p>Code: <a href="https://github.com/MyQRMart/guptik_desktop">github.com/MyQRMart/guptik_desktop</a></p>
+
+  <h2>2. Phone (the remote)</h2>
+  <ol>
+    <li>Install the GupTik Android app.</li>
+    <li>Sign in with the <strong>same email</strong>.</li>
+    <li>Home → Node card: Connect. Same Wi‑Fi uses LAN; away from home uses your tunnel if it is up.</li>
+  </ol>
+  <p>Code: <a href="https://github.com/MyQRMart/guptik">github.com/MyQRMart/guptik</a></p>
+
+  <h2>3. Browser (optional)</h2>
+  <p>With the desktop stack running, any device on the LAN can open:</p>
+  <p><code>http://&lt;pc-lan-ip&gt;:55000/web</code></p>
+  <p class="muted">Updates: desktop <em>app</em> and <em>node</em> version separately. Settings → Updates. A node update rebuilds the gateway only — your files stay.</p>
+</main>
+<footer>
+  <a href="/">Home</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/terms">Terms</a>
+</footer>
+</body>
+</html>

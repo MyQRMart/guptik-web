@@ -1,0 +1,11 @@
+name: guptik-web
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: guptik-web
+    ports:
+      - "50041:80"
+    volumes:
+      - ./public:/usr/share/nginx/html:ro
+      - ./nginx:/etc/nginx/conf.d:ro
+    restart: unless-stopped
